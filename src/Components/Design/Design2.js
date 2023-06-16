@@ -12,7 +12,6 @@ export default function Design2() {
   let [multipls, setmultipls] = useState(false);
   let [shared, setshared] = useState(false);
   let [persentage, setpersentage] = useState(false);
-  // let [sign, setSign] = useState("");
   const clearFunc = () => {
     setNumber("");
     setFirtsVal("");
@@ -141,8 +140,9 @@ export default function Design2() {
             display: "grid",
             gridTemplate: "repeat(4,1fr)0",
             gridTemplateRows: "repeat(5,1fr)",
-            gridColumnGap: "0px",
+            gridColumnGap: "3px",
             gridRowGap: "5px",
+            borderRadius:'20px'
           }}
         >
           <Button
