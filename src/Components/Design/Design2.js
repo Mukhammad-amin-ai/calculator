@@ -28,9 +28,13 @@ export default function Design2() {
     if (switchVal) {
       firstVal += num;
       setFirtsVal(firstVal);
+      if(switchVal === false){
+        setNumber("")
+      }
     } else {
       secoundVal += num;
       setSecoundVal(secoundVal);
+      
     }
   };
 
@@ -49,18 +53,24 @@ export default function Design2() {
     setmultipls(!multipls);
     setNumber("");
   };
+
   const share = () => {
     setSwitchVal(!switchVal);
     setshared(!shared);
     setNumber("");
   };
+
   const percentageFunc = () => {
     setSwitchVal(!switchVal);
     setpersentage(!persentage);
     setNumber("");
   };
+
   const resultFunc = () => {
     if (increas) {
+      console.log(number);
+      console.log(firstVal);
+      console.log(secoundVal);
       setNumber(parseFloat(firstVal) + parseFloat(secoundVal));
     } else if (decreas) {
       setNumber(parseFloat(firstVal) - parseFloat(secoundVal));
