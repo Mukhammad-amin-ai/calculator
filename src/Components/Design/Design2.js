@@ -22,7 +22,7 @@ export default function Design2() {
     if (switcher) {
       number += num;
       setNumber(number);
-      if (number.length === 10) {
+      if (number.length === 9) {
         setSwitcher(false);
       }
     }
@@ -70,7 +70,7 @@ export default function Design2() {
     } else if (shared) {
       setNumber(parseFloat(firstVal) / parseFloat(secoundVal));
     } else if (persentage) {
-      setNumber(parseFloat(firstVal) * parseFloat(secoundVal) / 100);
+      setNumber((parseFloat(firstVal) * parseFloat(secoundVal)) / 100);
     }
   };
 
@@ -87,26 +87,29 @@ export default function Design2() {
     >
       <Box
         sx={{
-          width: "454px",
-          height: "918px",
+          width: "300px",
+          height: "600px",
           backgroundImage: `url(${img1})`,
-          backgroundSize: "cover",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
           position: "absolute",
         }}
       ></Box>
       <Box
         sx={{
-          width: "404px",
-          height: "780px",
+          width: "300px",
+          height: "500px",
           position: "absolute",
-          top: "100px",
+          top: "160px",
           display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           flexDirection: "column",
         }}
       >
         <Box
           sx={{
-            width: "100%",
+            width: "90%",
             height: "30%",
             backgroundColor: "#000",
             display: "flex",
@@ -123,7 +126,7 @@ export default function Design2() {
               alignItems: "end",
             }}
           >
-            <Typography sx={{ fontSize: "70px", color: "#fff" }}>
+            <Typography sx={{ fontSize: "50px", color: "#fff" }}>
               {number}
             </Typography>
           </Box>
@@ -132,34 +135,34 @@ export default function Design2() {
 
         <Box
           sx={{
-            width: "100%",
+            width: "90%",
             height: "70%",
             backgroundColor: "#000",
             display: "grid",
             gridTemplate: "repeat(4,1fr)0",
             gridTemplateRows: "repeat(5,1fr)",
             gridColumnGap: "0px",
-            gridRowGap: "10px",
+            gridRowGap: "5px",
           }}
         >
           <Button
             onClick={clearFunc}
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: "#A5A5A5",
               borderRadius: "352px",
               gridArea: "1 / 1 / 2 / 2",
               ":hover": { background: "#A5A5A5" },
             }}
           >
-            <Typography sx={{ fontSize: "46px", color: "#000" }}>AC</Typography>
+            <Typography sx={{ fontSize: "30px", color: "#000" }}>AC</Typography>
           </Button>
           {/* ac */}
           <Button
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: "#A5A5A5",
               borderRadius: "352px",
               gridArea: "1 / 2 / 2 / 3",
@@ -175,8 +178,8 @@ export default function Design2() {
           <Button
             onClick={percentageFunc}
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: "#A5A5A5",
               borderRadius: "352px",
               gridArea: "1 / 3 / 2 / 4",
@@ -189,8 +192,8 @@ export default function Design2() {
           <Button
             onClick={share}
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: " #F1A33B",
               borderRadius: "352px",
               gridArea: "1 / 4/ 2 / 5",
@@ -204,8 +207,8 @@ export default function Design2() {
           <Button
             onClick={multiply}
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: " #F1A33B",
               borderRadius: "352px",
               gridArea: "2 / 4/ 3 / 5",
@@ -218,8 +221,8 @@ export default function Design2() {
           <Button
             onClick={decrease}
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: " #F1A33B",
               borderRadius: "352px",
               gridArea: "3 / 4 / 4 / 5",
@@ -232,8 +235,8 @@ export default function Design2() {
           <Button
             onClick={calculation}
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: " #F1A33B",
               borderRadius: "352px",
               gridArea: "4 / 4 / 5 / 5",
@@ -246,8 +249,8 @@ export default function Design2() {
           <Button
             onClick={resultFunc}
             sx={{
-              width: "88px",
-              height: "88px",
+              width: "66px",
+              height: "66px",
               background: " #F1A33B",
               borderRadius: "352px",
               gridArea: "5 / 4 / 6 / 5",
@@ -257,183 +260,148 @@ export default function Design2() {
             <Typography sx={{ fontSize: "46px", color: "#000" }}>=</Typography>
           </Button>
           {/* = */}
-          <Box
+          <Button
+            onClick={() => addNumber(0)}
             sx={{
-              width: "292px",
-              height: "400px",
-              gridArea: "2 / 1 / 6 / 4",
-              display: "grid",
-              gridTemplate: "repeat(4,1fr)0",
-              gridTemplateRows: "repeat(5,1fr)",
-              gridColumnGap: "15px",
-              gridRowGap: "18px",
+              width: "130px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "5 / 1 / 6 / 3",
             }}
           >
-            <Button
-              onClick={() => addNumber(0)}
-              sx={{
-                width: "190px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "5 / 1 / 6 / 3",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                0
-              </Typography>
-            </Button>
-            {/* 0 */}
-            <Button
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "5 / 3 / 6 / 4",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                ,
-              </Typography>
-            </Button>
-            {/* , */}
-            <Button
-              onClick={() => addNumber(1)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "4 / 1 / 5 / 2",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                1
-              </Typography>
-            </Button>
-            {/* 1 */}
-            <Button
-              onClick={() => addNumber(2)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "4 / 2 / 5 / 3",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                2
-              </Typography>
-            </Button>
-            {/* 2 */}
-            <Button
-              onClick={() => addNumber(3)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "4 / 3 / 5 / 4",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                3
-              </Typography>
-            </Button>
-            {/* 3 */}
-            <Button
-              onClick={() => addNumber(4)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "3 / 1 / 4 / 2",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                4
-              </Typography>
-            </Button>
-            {/* 4 */}
-            <Button
-              onClick={() => addNumber(5)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "3 / 2 / 4 / 3",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                5
-              </Typography>
-            </Button>
-            {/* 5 */}
-            <Button
-              onClick={() => addNumber(6)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "3 / 3 / 4 / 4",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                6
-              </Typography>
-            </Button>
-            {/* 6 */}
-            <Button
-              onClick={() => addNumber(7)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "2 / 1 / 3 / 2",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                7
-              </Typography>
-            </Button>
-            {/* 7 */}
-            <Button
-              onClick={() => addNumber(8)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: " 2 / 2 / 3 / 3",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                8
-              </Typography>
-            </Button>
-            {/* 8*/}
-            <Button
-              onClick={() => addNumber(9)}
-              sx={{
-                width: "88px",
-                height: "88px",
-                background: "#333333",
-                borderRadius: "352px",
-                gridArea: "2 / 3 / 3 / 4",
-              }}
-            >
-              <Typography sx={{ fontSize: "46px", color: "#fff" }}>
-                9
-              </Typography>
-            </Button>
-            {/* 9 */}
-          </Box>
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>0</Typography>
+          </Button>
+          {/* 0 */}
+          <Button
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "5 / 3 / 6 / 4",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>,</Typography>
+          </Button>
+          {/* , */}
+          <Button
+            onClick={() => addNumber(1)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "4 / 1 / 5 / 2",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>1</Typography>
+          </Button>
+          {/* 1 */}
+          <Button
+            onClick={() => addNumber(2)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "4 / 2 / 5 / 3",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>2</Typography>
+          </Button>
+          {/* 2 */}
+          <Button
+            onClick={() => addNumber(3)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "4 / 3 / 5 / 4",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>3</Typography>
+          </Button>
+          {/* 3 */}
+          <Button
+            onClick={() => addNumber(4)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "3 / 1 / 4 / 2",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>4</Typography>
+          </Button>
+          {/* 4 */}
+          <Button
+            onClick={() => addNumber(5)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "3 / 2 / 4 / 3",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>5</Typography>
+          </Button>
+          {/* 5 */}
+          <Button
+            onClick={() => addNumber(6)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "3 / 3 / 4 / 4",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>6</Typography>
+          </Button>
+          {/* 6 */}
+          <Button
+            onClick={() => addNumber(7)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "2 / 1 / 3 / 2",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>7</Typography>
+          </Button>
+          {/* 7 */}
+          <Button
+            onClick={() => addNumber(8)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: " 2 / 2 / 3 / 3",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>8</Typography>
+          </Button>
+          {/* 8*/}
+          <Button
+            onClick={() => addNumber(9)}
+            sx={{
+              width: "66px",
+              height: "66px",
+              background: "#333333",
+              borderRadius: "352px",
+              gridArea: "2 / 3 / 3 / 4",
+            }}
+          >
+            <Typography sx={{ fontSize: "46px", color: "#fff" }}>9</Typography>
+          </Button>
+          {/* 9 */}
         </Box>
       </Box>
     </Box>
